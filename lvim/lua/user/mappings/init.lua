@@ -1,0 +1,6 @@
+require('user.mappings.general')
+require('user.mappings.lspsaga')
+require('user.mappings.far')
+require('user.mappings.movement')
+require('user.mappings.neotree')
+require('user.mappings.telescope')
