@@ -16,9 +16,11 @@ opt.smarttab = true
 opt.fileencoding = "utf-8"
 opt.termguicolors = true
 opt.smartcase = true
-opt.foldcolumn = "1"
 opt.foldlevelstart = 99
+opt.foldlevel = 10
 opt.foldenable = true
+opt.fillchars = [[eob: ,vert: ,fold: ,foldopen:,foldsep: ,foldclose:]]
+opt.foldcolumn = "0"
 opt.laststatus = 2
 opt.cmdheight = 0
 opt.pumheight = 10
@@ -29,8 +31,3 @@ opt.guifont = { "MonoLisa Nerd Font:h15" }
 vim.g.editorconfig = true
 
 lvim.colorscheme = 'dracula'
-
-vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = { '*.json', '*.lua', '*.tsx', '*.ts', '*.js', 'jsx', '*.css', '*.scss', '*.less', '*.sass', '*.jsonc', '*.html' },
-  command = "ColorizerAttachToBuffer",
-})

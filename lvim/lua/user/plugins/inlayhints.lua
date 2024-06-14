@@ -1,37 +1,45 @@
 return {
-
-  'lvimuser/lsp-inlayhints.nvim',
+  'simrat39/inlay-hints.nvim',
   config = function()
-    require('lsp-inlayhints').setup({
-      inlay_hints = {
-        parameter_hints = {
-          show = true,
-          prefix = "<- ",
-          separator = ", ",
-          remove_colon_start = false,
-          remove_colon_end = true,
+    require("inlay-hints").setup()
+
+    local ih = require("inlay-hints")
+    local lspconfig = require("lspconfig")
+
+    lspconfig.tsserver.setup({
+      on_attach = function(c, b)
+        ih.on_attach(c, b)
+      end,
+      settings = {
+        Lua = {
+          hint = {
+            enable = true,
+          },
         },
-        type_hints = {
-          -- type and other hints
-          show = true,
-          prefix = "",
-          separator = ", ",
-          remove_colon_start = false,
-          remove_colon_end = false,
+        javascript = {
+          inlayHints = {
+            includeInlayEnumMemberValueHints = true,
+            includeInlayFunctionLikeReturnTypeHints = true,
+            includeInlayFunctionParameterTypeHints = true,
+            includeInlayParameterNameHints = "all", -- 'none' | 'literals' | 'all';
+            includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+            includeInlayPropertyDeclarationTypeHints = true,
+            includeInlayVariableTypeHints = true,
+          },
         },
-        only_current_line = false,
-        -- separator between types and parameter hints. Note that type hints are
-        -- shown before parameter
-        labels_separator = "  ",
-        -- whether to align to the length of the longest line in the file
-        max_len_align = false,
-        -- padding from the left if max_len_align is true
-        max_len_align_padding = 1,
-        -- highlight group
-        highlight = "LspInlayHint",
+        typescript = {
+          inlayHints = {
+            includeInlayEnumMemberValueHints = true,
+            includeInlayFunctionLikeReturnTypeHints = true,
+            includeInlayFunctionParameterTypeHints = true,
+            includeInlayParameterNameHints = "all", -- 'none' | 'literals' | 'all';
+            includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+            includeInlayPropertyDeclarationTypeHints = true,
+            includeInlayVariableTypeHints = true,
+          },
+        },
+
       },
-      enabled_at_startup = true,
-      debug_mode = false,
     })
   end
 }
