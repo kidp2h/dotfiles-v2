@@ -91,6 +91,8 @@ lvim.autocommands = {
         vim.api.nvim_set_hl(0, "Info", { fg = colors.bg, bg = colors.cyan })
         vim.api.nvim_set_hl(0, "WarningMsg", { fg = colors.bg, bg = colors.yellow })
         vim.api.nvim_set_hl(0, "LspInlayHint", { bg = 'none', fg = '#969696' })
+        vim.api.nvim_set_hl(0, "NeoTreeTabSeparatorInActive", { bg = 'none', fg = colors.purple })
+        vim.api.nvim_set_hl(0, "NeoTreeTabInActive", { bg = 'none', fg = colors.purple })
       end,
     },
   },
