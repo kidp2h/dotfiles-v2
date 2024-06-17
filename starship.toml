@@ -10,25 +10,29 @@ add_newline = false
 # $character
 # """
 format = """
-$cmd_duration$directory $git_branch
-$character
+
+[╭─](bold fg:red)$directory $time$git_branch
+[┣](bold fg:red)
+[╰─](bold fg:red) $username 🚀 
+
 """
+
 
 # Replace the "❯" symbol in the prompt with "➜"
 [character]                            # The name of the module we are configuring is "character"
-success_symbol = "[• ](bold fg:green) "
-error_symbol = "[• 󰅙](bold fg:red) "
+success_symbol = "[🚀](bold fg:green) "
+error_symbol = "[🚀](bold fg:red) "
 
 # Disable the package module, hiding it from the prompt completely
 [package]
-disabled = true
+disabled = false
 
 [git_branch]
-style = "bg: green"
+style = "bg: purple"
 symbol = "󰘬"
-truncation_length = 4
+truncation_length = 10
 truncation_symbol = ""
-format = "• [](bold fg:green)[$symbol $branch(:$remote_branch)](fg:black bg:green)[ ](bold fg:green)"
+format = "[](bold fg:purple)[ $symbol $branch(:$remote_branch)](fg:black bg:purple)[ ](bold fg:purple)"
 
 [git_commit]
 commit_hash_length = 4
@@ -60,20 +64,20 @@ disabled = false
 disabled = false
 
 [memory_usage]
-disabled = true
+disabled = true 
 threshold = -1
 symbol = " "
 style = "bold dimmed green"
 
 [time]
-disabled = true
-format = '🕙[\[ $time \]]($style) '
+disabled = false 
+format = '[](bold fg:green)[ $time ](fg:black bg:green)[ ](bold fg:green)'
 time_format = "%T"
 
 [username]
 style_user = "bold bg:cyan fg:black"
 style_root = "red bold"
-format = "[](bold fg:cyan)[$user]($style)"
+format = "[](bold fg:cyan)[$user]($style)[ ](bold fg:cyan)"
 disabled = false
 show_always = true
 
@@ -83,7 +87,7 @@ read_only = "  "
 style = "bg:green fg:black"
 truncation_length = 6
 truncation_symbol = "••/"
-format = '[](bold fg:green)[$path ]($style)[](bold fg:green)'
+format = '[](bold fg:green)[$path ]($style)[](bold fg:green)'
 
 
 [directory.substitutions]
@@ -92,7 +96,7 @@ format = '[](bold fg:green)[$path ]($style)[](bold fg:green)'
 "Downloads" = "  "
 "Music" = " 󰎈 "
 "Pictures" = "  "
-"Videos" = "  "
+"Videos" = "  "
 
 [cmd_duration]
 min_time = 0
