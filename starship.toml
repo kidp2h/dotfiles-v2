@@ -13,7 +13,7 @@ format = """
 
 [╭─](bold fg:red)$directory $time$git_branch
 [┣](bold fg:red)
-[╰─](bold fg:red) $username 🚀 
+[╰─](bold fg:red)$username 🚀 
 
 """
 
@@ -71,13 +71,13 @@ style = "bold dimmed green"
 
 [time]
 disabled = false 
-format = '[](bold fg:green)[ $time ](fg:black bg:green)[ ](bold fg:green)'
+format = '[](bold fg:green)[ $time ](fg:black bg:green)[ ](bold fg:green)'
 time_format = "%T"
 
 [username]
 style_user = "bold bg:cyan fg:black"
 style_root = "red bold"
-format = "[](bold fg:cyan)[$user]($style)[ ](bold fg:cyan)"
+format = "[](bold fg:cyan)[$user]($style)[ ](bold fg:cyan)"
 disabled = false
 show_always = true
 
@@ -87,7 +87,7 @@ read_only = "  "
 style = "bg:green fg:black"
 truncation_length = 6
 truncation_symbol = "••/"
-format = '[](bold fg:green)[$path ]($style)[](bold fg:green)'
+format = '[](bold fg:green)[$path ]($style)[](bold fg:green)'
 
 
 [directory.substitutions]

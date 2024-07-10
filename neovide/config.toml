@@ -1,0 +1,17 @@
+[font]
+  normal = ['CaskaydiaCove Nerd Font', 'monospace']
+  size = 13
+
+fork = true 
+frame = "full"
+idle = true
+maximized = false
+neovim-bin = "/usr/bin/nvim" # in reality found dynamically on $PATH if unset
+
+no-multigrid = true 
+srgb = true 
+tabs = true
+theme = "dracula"
+title-hidden = true 
+vsync = false
+wsl = false

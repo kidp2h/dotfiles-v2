@@ -1,15 +1,8 @@
-local formatters = require "lvim.lsp.null-ls.formatters"
-
-formatters.setup {
-  {
-    command = "prettierd",
-    filetypes = {
-      "javascriptreact",
-      "javascript",
-      "typescriptreact",
-      "typescript",
-      "json",
-      "html"
-    },
-  },
+local formatters = {
+  lua = { "stylua" },
+  javascript = { "prettierd" },
+  typescript = { "prettierd" },
+  typescriptreact = { "prettierd" },
+  javascriptreact = { "prettierd" },
 }
+return formatters

@@ -4,8 +4,8 @@ return {
     { ",", "<cmd>lua require('nvim-window').pick()<cr>", desc = "nvim-window: Jump to window" },
   },
   config = function()
-    local colors = require('dracula').colors()
-    vim.api.nvim_set_hl(0, "WindowHighlight", { bg = colors.purple, fg = colors.bg, underline = false, bold = true })
+    local colors = require('user.colors')
+    vim.api.nvim_set_hl(0, "WindowHighlight", { bg = colors.purple, fg = colors.white, underline = false, bold = true })
 
     require('nvim-window').setup({
       -- The characters available for hinting windows.

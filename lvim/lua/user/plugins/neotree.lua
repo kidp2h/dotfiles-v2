@@ -223,6 +223,7 @@ return {
         -- instead of relying on nvim autocmd events.
         window = {
           mappings = {
+            ["<leader>p"] = "image_wezterm",
             ["<bs>"] = "navigate_up",
             ["."] = "set_root",
             ["H"] = "toggle_hidden",
@@ -253,7 +254,14 @@ return {
           },
         },
 
-        commands = {} -- Add a custom command or override a global one using the same function name
+        commands = {
+          image_wezterm = function(state)
+            local node = state.tree:get_node()
+            if node.type == "file" then
+              require("image_preview").PreviewImage(node.path)
+            end
+          end,
+        } -- Add a custom command or override a global one using the same function name
       },
       buffers = {
         follow_current_file = {

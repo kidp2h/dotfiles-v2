@@ -277,3 +277,18 @@ export const ModulePowerIcon = (props = {}) => Widget.Button({
         setupCursorHover(button);
     }
 })
+
+
+export const ModuleProjectorIcon = (props = {}) => Widget.Button({
+    ...props,
+    className: 'txt-small sidebar-iconbutton',
+    tooltipText: 'Projector',
+    onClicked: () => {
+        closeEverything();
+        Utils.timeout(1, () => openWindowOnAllMonitors('projector'));
+    },
+    child: MaterialIcon('desktop_windows', 'norm'),
+    setup: button => {
+        setupCursorHover(button);
+    }
+})

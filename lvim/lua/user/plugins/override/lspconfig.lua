@@ -1,1 +1,1 @@
-vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "sumneko_lua" })
+-- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "sumneko_lua" })

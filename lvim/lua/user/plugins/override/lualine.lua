@@ -1,16 +1,4 @@
-local colors = {
-  bg       = '#282A36',
-  fg       = '#f8f8f2',
-  yellow   = '#f1fa8c',
-  cyan     = '#8be9fd',
-  darkblue = '#081633',
-  green    = '#50fa7b',
-  orange   = '#ffb86c',
-  violet   = '#a9a1e1',
-  magenta  = '#bd93f9',
-  blue     = '#51afef',
-  red      = '#ff5555',
-}
+local colors = require('user.colors')
 lvim.builtin.lualine.options = {
   icons_enabled = true,
   component_separators = "",
@@ -113,8 +101,8 @@ ins_left {
       S = colors.orange,
       [''] = colors.orange,
       ic = colors.yellow,
-      R = colors.violet,
-      Rv = colors.violet,
+      R = colors.pink,
+      Rv = colors.pink,
       cv = colors.red,
       ce = colors.red,
       r = colors.cyan,
@@ -147,11 +135,12 @@ ins_left { 'progress', color = { fg = colors.fg, gui = 'bold' } }
 ins_left {
   'diagnostics',
   sources = { 'nvim_diagnostic' },
-  symbols = { error = ' ', warn = ' ', info = ' ' },
+  symbols = { error = ' ', warn = ' ', info = ' ', hint = " " },
   diagnostics_color = {
     color_error = { fg = colors.red },
     color_warn = { fg = colors.yellow },
-    color_info = { fg = colors.cyan },
+    color_info = { fg = colors.blue },
+    color_hint = { fg = colors.cyan },
   },
 }
 
@@ -185,7 +174,7 @@ ins_left {
   end,
   icon = '',
   -- icon = '  LSP:',
-  color = { fg = '#ffffff', gui = 'bold' },
+  color = { fg = colors.red, gui = 'bold' },
 }
 
 -- Add components to right sections
@@ -206,7 +195,7 @@ ins_right {
 ins_right {
   'branch',
   icon = '',
-  color = { fg = colors.violet, gui = 'bold' },
+  color = { fg = colors.pink, gui = 'bold' },
 }
 
 ins_right {

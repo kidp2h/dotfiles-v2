@@ -14,7 +14,8 @@ import {
     ModuleSettingsIcon,
     ModulePowerIcon,
     ModuleRawInput,
-    ModuleCloudflareWarp
+    ModuleCloudflareWarp,
+  ModuleProjectorIcon
 } from "./quicktoggles.js";
 import ModuleNotificationList from "./centermodules/notificationlist.js";
 import ModuleAudioControls from "./centermodules/audiocontrols.js";
@@ -79,6 +80,7 @@ const timeRow = Box({
         // ModuleEditIcon({ hpack: 'end' }), // TODO: Make this work
         ModuleReloadIcon({ hpack: 'end' }),
         ModuleSettingsIcon({ hpack: 'end' }),
+        ModuleProjectorIcon({hpack: 'end'}),
         ModulePowerIcon({ hpack: 'end' }),
     ]
 });
@@ -90,7 +92,7 @@ const togglesBox = Widget.Box({
         ToggleIconWifi(),
         ToggleIconBluetooth(),
         // await ModuleRawInput(),
-        // await HyprToggleIcon('touchpad_mouse', 'No touchpad while typing', 'input:touchpad:disable_while_typing', {}),
+        await HyprToggleIcon('touchpad_mouse', 'No touchpad while typing', 'input:touchpad:disable_while_typing', {}),
         await ModuleNightLight(),
         await ModuleInvertColors(),
         ModuleIdleInhibitor(),

@@ -1,7 +1,10 @@
-lvim.transparent_window = true
+lvim.transparent_window = false
 lvim.use_icons = true
 lvim.termguicolors = true
-lvim.format_on_save.enabled = true
+-- lvim.format_on_save.enabled = true
+
+vim.opt.laststatus = 3
+vim.opt.splitkeep = "screen"
 local opt = vim.opt
 -- Options
 opt.relativenumber = true
@@ -27,7 +30,25 @@ opt.pumheight = 10
 opt.undofile = true -- enable persistent undo
 opt.updatetime = 100
 opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
-opt.guifont = { "MonoLisa Nerd Font:h15" }
+opt.guifont = { "GeistMono Nerd Font", ":h12" }
 vim.g.editorconfig = true
+vim.opt.background = "light"
+vim.diagnostic.config({ virtual_text = false })
+lvim.colorscheme = 'github_light'
 
-lvim.colorscheme = 'dracula'
+
+
+if vim.g.neovide then
+  if (lvim.transparent_window) then
+    vim.g.neovide_transparency = 0.9
+  end
+  vim.g.neovide_window_blurred = true
+  vim.g.neovide_remember_window_size = true
+  vim.g.neovide_cursor_animation_length = 0.03
+  vim.g.neovide_cursor_trail_length = 0.1
+  vim.g.neovide_cursor_antialiasing = true
+  vim.g.neovide_cursor_vfx_mode = "pixiedust"
+  vim.g.neovide_cursor_vfx_particle_lifetime = 0.15
+  vim.g.neovide_cursor_vfx_particle_density = 15
+  vim.g.neovide_cursor_vfx_particle_speed = 10
+end
