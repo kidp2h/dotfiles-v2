@@ -9,10 +9,13 @@
 #plugin,
 #main {
   background: transparent;
+  color: black;
+  font-family: "SF Pro Display";
 }
 
 #window {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
 }
 
 #match.activatable {
@@ -39,7 +42,7 @@
 #match:selected,
 #match:hover,
 #plugin:hover {
-  background: #354F62;
+  background: white;
 }
 
 #entry {
@@ -47,7 +50,7 @@
   border: 0px solid transparent;
   border-radius: 10px;
   margin: 0.5rem;
-  background-color: #354F62;
+  background-color: white;
   padding: 0.3rem 1rem;
 }
 
@@ -70,7 +73,8 @@ list>#plugin:hover {
 
 box#main {
   /* background-color: rgba(0, 0, 0, 0.1); */
-  box-shadow: inset 0 0 0 1px #354F62, 0 0 0 1px #354F62;
+  box-shadow: inset 0 0 0 1px #00000000, 0 0 0 1px #00000000;
   border-radius: 20px;
+  margin-top: 20rem;
   padding: 0.3rem;
 }

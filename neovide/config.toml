@@ -1,0 +1,27 @@
+frame = "none"
+maximized = true
+title-hidden = true
+idle = true
+
+[font]
+  hinting = "full"
+  size = 12
+  width = 0.01
+  edging = "antialias"
+
+
+[font.features]
+  "MonoLisa" = ["+ss02", "+liga", "+ures", "+ss18", "+ss10", "+ss12", "+calt", "+frac" , "+ss05", "+ss07", "+ss08", "+ss13", "+ss14","+ss17" ,"+ss11"]
+
+[[font.bold]]
+  family = "MonoLisa"
+  style = "Italic Bold"
+
+[[font.normal]]
+  family= "MonoLisa"
+  style="Italic"
+
+
+
+
+

@@ -159,7 +159,9 @@ export default () => {
               );
             }),
         }),
-        overlays: [TrackProgress()],
+
+        // overlays: [TrackProgress()],
+        overlays: [],
       }),
     ],
   });
@@ -212,52 +214,7 @@ export default () => {
             execAsync(CUSTOM_MODULE_SCROLLDOWN_SCRIPT).catch(print),
         }),
       });
-    } else
-      return BarGroup({
-        child: Box({
-          children: [
-            BarResource(
-              "RAM Usage",
-              "memory",
-              `LANG=C free | awk '/^Mem/ {printf("%.2f\\n", ($3/$2) * 100)}'`,
-              "bar-ram-circprog",
-              "bar-ram-txt",
-              "bar-ram-icon",
-            ),
-            Revealer({
-              revealChild: true,
-              transition: "slide_left",
-              transitionDuration: userOptions.animations.durationLarge,
-              child: Box({
-                className: "spacing-h-10 margin-left-10",
-                children: [
-                  BarResource(
-                    "Swap Usage",
-                    "swap_horiz",
-                    `LANG=C free | awk '/^Swap/ {if ($2 > 0) printf("%.2f\\n", ($3/$2) * 100); else print "0";}'`,
-                    "bar-swap-circprog",
-                    "bar-swap-txt",
-                    "bar-swap-icon",
-                  ),
-                  BarResource(
-                    "CPU Usage",
-                    "settings_motion_mode",
-                    `LANG=C top -bn1 | grep Cpu | sed 's/\\,/\\./g' | awk '{print $2}'`,
-                    "bar-cpu-circprog",
-                    "bar-cpu-txt",
-                    "bar-cpu-icon",
-                  ),
-                ],
-              }),
-              setup: (self) =>
-                self.hook(Mpris, (label) => {
-                  const mpris = Mpris.getPlayer("");
-                  self.revealChild = true;
-                }),
-            }),
-          ],
-        }),
-      });
+    }
   };
   return EventBox({
     onScrollUp: (self) => switchToRelativeWorkspace(self, -1),

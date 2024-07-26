@@ -1,0 +1,38 @@
+---@diagnostic disable: inject-field
+lvim.builtin.which_key.active = false
+-- lvim.builtin.which_key.mappings = {
+-- 	{ "<leader>e", "<cmd>Neotree toggle focus<cr>", desc = "Neo tree File Explorer", mode = "n" },
+-- 	{ "<leader><Space>", hidden = true },
+-- 	{
+-- 		"<leader>ha",
+-- 		group = "Harpoon",
+-- 		"<cmd>lua require('harpoon.mark').addfile()<cr>",
+-- 		desc = "Harpoon Add File",
+-- 		mode = "n",
+-- 	},
+-- 	{ "<leader>]", desc = "Next Diagnostic" },
+-- 	{ "<leader>[", desc = "Previous Diagnostic" },
+-- 	{ "<leader>Ti", hidden = true },
+-- 	{ "<leader>p", desc = "Lazy package plugins" },
+-- 	{ "g", hidden = true },
+-- 	{ "<leader>g", group = "LSP", desc = "LSP", icon = "󰅨" },
+-- 	{ "<leader>gh", "<cmd>Lspsaga finder<CR>", desc = "LSP finder" },
+-- 	{ "<leader>gt", "<cmd>Lspsaga peek_type_definition<CR>", desc = "LSP Peek Type Definition" },
+-- 	{ "<leader>gd", "<cmd>Lspsaga peek_definition<CR>", desc = "LSP Peek Definition" },
+-- 	{ "<leader>gD", "<cmd>Lspsaga goto_definition<CR>", desc = "LSP Goto Definition" },
+-- 	{ "<leader>gT", "<cmd>Lspsaga goto_type_definition<CR>", desc = "LSP Goto Type Definition" },
+-- 	{ "<leader>gk", "<cmd>Lspsaga hover_doc<CR>", desc = "LSP Hover Documentation" },
+-- 	{ "<leader>g[", "<cmd>Lspsaga diagnostic_jump_prev<CR>", desc = "Previos Diagnostic" },
+-- 	{ "<leader>g]", "<cmd>Lspsaga diagnostic_jump_next<CR>", desc = "Next Diagnostic" },
+-- 	{ "<leader>gr", "<cmd>Lspsaga rename<CR>", desc = "Rename" },
+-- 	{ "<leader>go", "<cmd>Lspsaga outline<CR>", desc = "Toggle outline" },
+-- 	{ "<leader>L", hidden = true },
+-- 	{ "<leader>x", desc = "Trouble", icon = "" },
+-- 	{ "<leader>w", desc = "Save Buffer" },
+-- 	{ "<leader>;", desc = "Alpha Dashboard", icon = "" },
+-- 	{ "<leader>c", hidden = true },
+-- }
+
+-- lvim.builtin.which_key.setup.win.title = false
+
+-- lvim.builtin.which_key.setup.preset = "modern"

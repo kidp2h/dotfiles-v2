@@ -26,6 +26,7 @@ import Indicator from "./modules/indicators/main.js";
 import Osk from "./modules/onscreenkeyboard/main.js";
 import Overview from "./modules/overview/main.js";
 import Session from "./modules/session/main.js";
+import Projector from "./modules/projector/main.js";
 import SideLeft from "./modules/sideleft/main.js";
 import SideRight from "./modules/sideright/main.js";
 import { COMPILED_STYLE_DIR } from "./init.js";
@@ -57,21 +58,22 @@ const Windows = () => [
   SideRight(),
   forMonitors(Osk),
   forMonitors(Session),
+  forMonitors(Projector),
   ...(userOptions.dock.enabled ? [forMonitors(Dock)] : []),
-  ...(userOptions.appearance.fakeScreenRounding !== 0
-    ? [
-        forMonitors((id) => Corner(id, "top left", true)),
-        forMonitors((id) => Corner(id, "top right", true)),
-      ]
-    : []),
-  forMonitors((id) =>
-    Corner(id, "bottom left", userOptions.appearance.fakeScreenRounding !== 0),
-  ),
-  forMonitors((id) =>
-    Corner(id, "bottom right", userOptions.appearance.fakeScreenRounding !== 0),
-  ),
-  forMonitors(BarCornerTopleft),
-  forMonitors(BarCornerTopright),
+  // ...(userOptions.appearance.fakeScreenRounding !== 0
+  //   ? [
+  //       forMonitors((id) => Corner(id, "top left", true)),
+  //       forMonitors((id) => Corner(id, "top right", true)),
+  //     ]
+  //   : []),
+  // forMonitors((id) =>
+  //   Corner(id, "bottom left", userOptions.appearance.fakeScreenRounding !== 0),
+  // ),
+  // forMonitors((id) =>
+  //   Corner(id, "bottom right", userOptions.appearance.fakeScreenRounding !== 0),
+  // ),
+  // forMonitors(BarCornerTopleft),
+  // forMonitors(BarCornerTopright),
 ];
 
 const CLOSE_ANIM_TIME = 210; // Longer than actual anim time to make sure widgets animate fully
