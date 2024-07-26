@@ -1,0 +1,5 @@
+lvim.keys.normal_mode["<F3>"] = "<cmd>lua require'dap'.continue()<CR>"
+lvim.keys.normal_mode["<F4>"] = "<cmd>lua require'dap'.step_over()<CR>"
+lvim.keys.normal_mode["<F5>"] = "<cmd>lua require'dap'.step_into()<CR>"
+lvim.keys.normal_mode["<F6>"] = "<cmd>lua require'dap'.step_out()<CR>"
+lvim.keys.normal_mode["<leader>b"] = "<cmd>lua require'dap'.toggle_breakpoint()<CR>"

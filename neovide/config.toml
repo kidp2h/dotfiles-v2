@@ -1,17 +1,27 @@
-[font]
-  normal = ['CaskaydiaCove Nerd Font', 'monospace']
-  size = 13
-
-fork = true 
-frame = "full"
+frame = "none"
+maximized = true
+title-hidden = true
 idle = true
-maximized = false
-neovim-bin = "/usr/bin/nvim" # in reality found dynamically on $PATH if unset
 
-no-multigrid = true 
-srgb = true 
-tabs = true
-theme = "dracula"
-title-hidden = true 
-vsync = false
-wsl = false
+[font]
+  hinting = "full"
+  size = 12
+  width = 0.01
+  edging = "antialias"
+
+
+[font.features]
+  "MonoLisa" = ["+ss02", "+liga", "+ures", "+ss18", "+ss10", "+ss12", "+calt", "+frac" , "+ss05", "+ss07", "+ss08", "+ss13", "+ss14","+ss17" ,"+ss11"]
+
+[[font.bold]]
+  family = "MonoLisa"
+  style = "Italic Bold"
+
+[[font.normal]]
+  family= "MonoLisa"
+  style="Italic"
+
+
+
+
+

@@ -1,1 +1,1 @@
-lvim.keys.normal_mode["<C-g>"] = "<cmd>Spectre<CR>"
+lvim.keys.normal_mode["<M-g>"] = "<cmd>Spectre<CR>"

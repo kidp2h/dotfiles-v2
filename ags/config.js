@@ -60,20 +60,20 @@ const Windows = () => [
   forMonitors(Session),
   forMonitors(Projector),
   ...(userOptions.dock.enabled ? [forMonitors(Dock)] : []),
-  ...(userOptions.appearance.fakeScreenRounding !== 0
-    ? [
-        forMonitors((id) => Corner(id, "top left", true)),
-        forMonitors((id) => Corner(id, "top right", true)),
-      ]
-    : []),
-  forMonitors((id) =>
-    Corner(id, "bottom left", userOptions.appearance.fakeScreenRounding !== 0),
-  ),
-  forMonitors((id) =>
-    Corner(id, "bottom right", userOptions.appearance.fakeScreenRounding !== 0),
-  ),
-  forMonitors(BarCornerTopleft),
-  forMonitors(BarCornerTopright),
+  // ...(userOptions.appearance.fakeScreenRounding !== 0
+  //   ? [
+  //       forMonitors((id) => Corner(id, "top left", true)),
+  //       forMonitors((id) => Corner(id, "top right", true)),
+  //     ]
+  //   : []),
+  // forMonitors((id) =>
+  //   Corner(id, "bottom left", userOptions.appearance.fakeScreenRounding !== 0),
+  // ),
+  // forMonitors((id) =>
+  //   Corner(id, "bottom right", userOptions.appearance.fakeScreenRounding !== 0),
+  // ),
+  // forMonitors(BarCornerTopleft),
+  // forMonitors(BarCornerTopright),
 ];
 
 const CLOSE_ANIM_TIME = 210; // Longer than actual anim time to make sure widgets animate fully

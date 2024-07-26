@@ -14,10 +14,10 @@ from kitty.tab_bar import (
 )
 
 opts = get_options()
-icon_fg = as_rgb(color_as_int(opts.color3))
+icon_fg = as_rgb(color_as_int(opts.color15))
 icon_bg = as_rgb(color_as_int(opts.color1))
-bat_text_color = as_rgb(color_as_int(opts.color16))
-clock_color = as_rgb(color_as_int(opts.color16))
+bat_text_color = as_rgb(color_as_int(opts.color4))
+clock_color = as_rgb(color_as_int(opts.color1))
 date_color = as_rgb(color_as_int(opts.color8))
 SEPARATOR_SYMBOL, SOFT_SEPARATOR_SYMBOL = ("", "")
 RIGHT_MARGIN = 1
@@ -39,14 +39,14 @@ PLUGGED_ICONS = {
     1: "",
 }
 UNPLUGGED_COLORS = {
-    15: as_rgb(color_as_int(opts.color1)),
-    16: as_rgb(color_as_int(opts.color15)),
+    15: as_rgb(color_as_int(opts.color4)),
+    16: as_rgb(color_as_int(opts.color4)),
 }
 PLUGGED_COLORS = {
-    15: as_rgb(color_as_int(opts.color1)),
-    16: as_rgb(color_as_int(opts.color6)),
-    99: as_rgb(color_as_int(opts.color6)),
-    100: as_rgb(color_as_int(opts.color2)),
+    15: as_rgb(color_as_int(opts.color4)),
+    16: as_rgb(color_as_int(opts.color4)),
+    99: as_rgb(color_as_int(opts.color4)),
+    100: as_rgb(color_as_int(opts.color4)),
 }
 
 
