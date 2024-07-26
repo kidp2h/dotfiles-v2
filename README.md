@@ -10,7 +10,9 @@
 
 ## Editor: Neovim
 
-![](https://github.com/kidp2h/dotfiles-v2/blob/main/assets/nvim/toggle.gif?raw=true)
+- Toggle theme
+  ![](https://github.com/kidp2h/dotfiles-v2/blob/main/assets/nvim/toggle.gif?raw=true)
+
 ![](https://github.com/kidp2h/dotfiles-v2/blob/main/assets/nvim/1.png?raw=true)
 ![](https://github.com/kidp2h/dotfiles-v2/blob/main/assets/nvim/2.png?raw=true)
 ![](https://github.com/kidp2h/dotfiles-v2/blob/main/assets/nvim/3.png?raw=true)
