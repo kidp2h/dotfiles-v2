@@ -17,6 +17,7 @@
 ![](https://github.com/kidp2h/dotfiles-v2/blob/main/assets/nvim/2.png?raw=true)
 ![](https://github.com/kidp2h/dotfiles-v2/blob/main/assets/nvim/3.png?raw=true)
 ![](https://github.com/kidp2h/dotfiles-v2/blob/main/assets/nvim/4.png?raw=true)
+![](https://github.com/kidp2h/dotfiles-v2/blob/main/assets/nvim/5.png?raw=true)
 
 # dotfiles-v2/nvim
 
