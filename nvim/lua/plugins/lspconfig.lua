@@ -148,22 +148,7 @@ return {
 	},
 	init = function() end,
 	config = function()
-		local servers = {
-			"prismals",
-			"tsserver",
-			"lua_ls",
-			"tailwindcss",
-			"dockerls",
-			"yamlls",
-			"html",
-			"graphql",
-			"gopls",
-			"css_variables",
-			"cssls",
-			"cssmodules_ls",
-			"jsonls",
-			"docker_compose_language_service",
-		}
+		local servers = require("lsp").servers
 		require("lsp").setup(servers)
 	end,
 }

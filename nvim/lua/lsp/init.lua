@@ -30,4 +30,20 @@ M.setup = function(servers)
 		})
 	end
 end
+M.servers = {
+	"prismals",
+	"tsserver",
+	"lua_ls",
+	"tailwindcss",
+	"dockerls",
+	"yamlls",
+	"html",
+	"graphql",
+	"gopls",
+	"css_variables",
+	"cssls",
+	"cssmodules_ls",
+	"jsonls",
+	"docker_compose_language_service",
+}
 return M

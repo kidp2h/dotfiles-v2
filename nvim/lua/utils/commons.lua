@@ -24,8 +24,8 @@ M.mapping = function(name)
 		return mapping
 	end
 end
-M.pure = function(path)
-	return { path }
+M.pure = function(path, lazy)
+	return { path, lazy = lazy or false }
 end
 
 M.custom = function(name)

@@ -12,16 +12,16 @@ idle = true
 
 [font.features]
   "MonoLisa" = ["+ss02", "+liga", "+ures", "+ss18", "+ss10", "+ss12", "+calt", "+frac" , "+ss05", "+ss07", "+ss08", "+ss13", "+ss14","+ss17" ,"+ss11"]
+  "0xProto" = ["+ss01"]
 
 [[font.bold]]
   family = "MonoLisa"
+  # family = "0xProto"
   style = "Italic Bold"
 
 [[font.normal]]
   family= "MonoLisa"
+  # family= "0xProto"
   style="Italic"
-
-
-
 
 

@@ -78,4 +78,13 @@ return {
 	plugin("codeium"),
 	plugin("jester"),
 	plugin("cmp-under-comparator"),
+	plugin("nvim-lint"),
+	plugin("schemastore"),
+	plugin("dropbar"),
+	plugin("incline"),
+	plugin("diffview"),
+	plugin("neogit"),
+
+	plugin("fugit2"),
+	pure("wakatime/vim-wakatime", false),
 }
