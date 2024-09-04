@@ -1,4 +1,5 @@
 return {
+	{ "yaml", "yaml.docker-compose", "yaml.gitlab" },
 	settings = {
 		yaml = {
 			schemas = {

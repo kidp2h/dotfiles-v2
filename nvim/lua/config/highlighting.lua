@@ -242,7 +242,7 @@ M.setup = function(flavour, background)
 				["!"] = " shell",
 				["t"] = " terminal",
 			}
-			return "  " .. string.upper(modeMap[vim.fn.mode()])
+			return string.upper(modeMap[vim.fn.mode()])
 		end,
 		color = function()
 			-- auto change color according to neovims mode
@@ -268,7 +268,7 @@ M.setup = function(flavour, background)
 				["!"] = palette.maroon,
 				t = palette.maroon,
 			}
-			return { fg = palette.base, bg = mode_color[vim.fn.mode()] }
+			return { fg = palette.base, bold = true, bg = mode_color[vim.fn.mode()] }
 		end,
 		padding = { right = 1 },
 	})
@@ -291,18 +291,26 @@ M.setup = function(flavour, background)
 	ins_left({ "progress", color = { fg = palette.base, bg = palette.green, gui = "bold" } })
 
 	ins_left({
-		"diagnostics",
-		sources = { "nvim_diagnostic" },
-		symbols = { error = " ", warn = " ", info = " " },
-		color = {
-			fg = palette.base,
-			bg = palette.mantle,
-		},
-		diagnostics_color = {
-			color_error = { fg = palette.maroon },
-			color_warn = { fg = palette.yellow },
-			color_info = { fg = palette.blue },
-		},
+		"filetype",
+		fmt = string.upper,
+		icons_enabled = false,
+		color = { fg = palette.base, bg = palette.sapphire, gui = "bold" },
+	})
+
+	ins_left({
+		function()
+			local is_loaded = vim.api.nvim_buf_is_loaded
+			local tbl = vim.api.nvim_list_bufs()
+			local loaded_bufs = 0
+			for i = 1, #tbl do
+				if is_loaded(tbl[i]) then
+					loaded_bufs = loaded_bufs + 1
+				end
+			end
+			return loaded_bufs
+		end,
+		icon = "﬘",
+		color = { fg = palette.base, bg = palette.peach, gui = "bold" },
 	})
 
 	-- Insert mid section. You can make any number of sections in neovim :)
@@ -359,7 +367,7 @@ M.setup = function(flavour, background)
 		color = { fg = palette.base, bg = palette.pink, gui = "bold" },
 	})
 
-	ins_right({
+	--[[ ins_right({
 		"diff",
 		-- Is it me or the symbol for modified us really weird
 		symbols = { added = " ", modified = " 󰝤 ", removed = "  " },
@@ -370,15 +378,15 @@ M.setup = function(flavour, background)
 		},
 		cond = conditions.hide_in_width,
 	})
-
-	ins_right({
+]]
+	--[[ ins_right({
 		function()
 			return ""
 		end,
 		color = { fg = palette.blue },
 		padding = { left = 1 },
 	})
-
+]]
 	require("lualine").setup({
 		options = M.options,
 		sections = M.sections,

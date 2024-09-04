@@ -1,4 +1,10 @@
 local inlayHints = {
+	filetypes = {
+		"javascript",
+		"javascriptreact",
+		"typescript",
+		"typescriptreact",
+	},
 	includeInlayParameterNameHints = "all",
 	includeInlayParameterNameHintsWhenArgumentMatchesName = false,
 	includeInlayFunctionParameterTypeHints = false,

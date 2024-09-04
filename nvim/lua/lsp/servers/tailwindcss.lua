@@ -1,4 +1,5 @@
 return {
+	filetypes = { "javascriptreact", "typescriptreact", "svelte", "vue", "html", "css", "scss", "postcss" },
 	on_attach = function(_, bufnr)
 		if vim.bo.filetype == "javascriptreact" or vim.bo.filetype == "typescriptreact" then
 			require("tailwindcss-colors").buf_attach(bufnr)

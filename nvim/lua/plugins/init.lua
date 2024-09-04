@@ -2,7 +2,6 @@ local pure = require("utils.commons").pure
 local plugin = require("utils.commons").plugin
 return {
 	pure("nvim-tree/nvim-web-devicons"),
-
 	plugin("lspkind"),
 	plugin("lspconfig"),
 	pure("williamboman/nvim-lsp-installer"),
@@ -67,12 +66,12 @@ return {
 	plugin("smart-splits"),
 	plugin("dressing"),
 	plugin("todo"),
-	plugin("rainbow-delimiters"),
+	-- plugin("rainbow-delimiters"),
 	plugin("treesitter"),
 	plugin("statuscol"),
 	plugin("twilight"),
 	plugin("tailwind-sorter"),
-	plugin("markview"),
+	-- plugin("markview"),
 	plugin("symbol-usage"),
 	plugin("lsp-timeout"),
 	plugin("codeium"),
@@ -84,7 +83,13 @@ return {
 	plugin("incline"),
 	plugin("diffview"),
 	plugin("neogit"),
-
 	plugin("fugit2"),
+	plugin("gh-actions"),
+	plugin("octo"),
+	-- plugin("precognition"),
+	plugin("neotest"),
+	plugin("ts-tools"),
+	plugin("render-markdown"),
+	plugin("ollama"),
 	pure("wakatime/vim-wakatime", false),
 }

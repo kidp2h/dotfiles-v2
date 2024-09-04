@@ -1,6 +1,8 @@
 local map = require("utils.api").map
 
-map("n", "<leader>w", ":w<cr>", "Save File")
+map("n", "<leader>w", function()
+	vim.cmd("w")
+end, "Save File")
 map("n", "<C-a>", "ggVG", "Select All")
 map("n", "q", "<Nop>", "Disable Ex mode")
 
@@ -17,3 +19,5 @@ map("n", "<F12>", function()
 		os.execute("kitty +kitten themes --reload-in=all Catppuccin-Mocha")
 	end
 end, "Toggle theme dark/light")
+
+map("n", "cfg", ":edit ~/.config/nvim/init.lua <cr>", "Edit config")

@@ -1,8 +1,0 @@
-require("user.plugins.override.nvimtree")
-require("user.plugins.override.lualine")
-require("user.plugins.override.telescope")
-require("user.plugins.override.alpha")
-require("user.plugins.override.cmp")
-require("user.plugins.override.breadcrumbs")
-require("user.plugins.override.gitsigns")
-require("user.plugins.override.which-key")

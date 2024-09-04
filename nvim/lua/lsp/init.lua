@@ -9,6 +9,7 @@ M.setup = function(servers)
 				capabilities = require("lsp.commons").capabilities,
 				on_attach = config.on_attach,
 				settings = config.settings,
+				filetypes = config.filetypes,
 			}
 		end
 		require("lspconfig")[server].setup({
@@ -27,12 +28,13 @@ M.setup = function(servers)
 				end
 			end,
 			settings = config.settings,
+			filetypes = config.filetypes,
 		})
 	end
 end
 M.servers = {
 	"prismals",
-	"tsserver",
+	-- "tsserver",
 	"lua_ls",
 	"tailwindcss",
 	"dockerls",
